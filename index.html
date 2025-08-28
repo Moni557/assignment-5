@@ -15,18 +15,19 @@
   </head>
   <body class="bg-green-50">
     <!-- Navbar -->
-    <div class="navbar bg-white shadow px-6">
-      <div class="flex-1">
+    <div
+      class="navbar bg-white shadow px-4 flex flex-col sm:flex-row sm:justify-between gap-2 sm:gap-6"
+    >
+      <div class="flex items-center justify-center sm:justify-start">
         <img src="./assets/logo.png" alt="logo" class="h-10 w-10" />
-        <span class="ml-2 font-bold text-xl">Emergency Service</span>
+        <span class="ml-2 font-bold text-lg sm:text-xl">Emergency Service</span>
       </div>
-      <div class="flex items-center gap-4">
+      <div class="flex items-center justify-center gap-2 sm:gap-4">
         <button id="heart-btn" class="btn btn-ghost btn-circle">💗</button>
-        <div id="coin-count" class="badge badge-success p-3">100</div>
-        <div id="copy-count" class="badge badge-info p-3">0 Copy</div>
+        <div id="coin-count" class="badge badge-success p-2 sm:p-3">100</div>
+        <div id="copy-count" class="badge badge-info p-2 sm:p-3">0 Copy</div>
       </div>
     </div>
-
     <!-- Hero Section -->
     <div
       class="bg-gradient-to-r from-green-800 to-green-600 text-center py-10 text-white"
@@ -39,10 +40,10 @@
     </div>
 
     <!-- Main Section -->
-    <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 p-6">
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 p-4 sm:p-6">
       <!-- Emergency Cards Section -->
       <div
-        class="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+        class="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
         id="card-container"
       >
         <!-- Example Card (Template for All Services) -->
@@ -290,7 +291,7 @@
       </div>
 
       <!-- History Section -->
-      <div class="bg-white shadow rounded-lg p-4">
+      <div class="bg-white shadow rounded-lg p-4 mt-4 lg:mt-0 lg:col-span-1">
         <div class="flex justify-between items-center">
           <h2 class="font-bold text-lg">📞 Call History</h2>
           <button id="clear-history" class="btn btn-sm btn-error">Clear</button>
