@@ -13,12 +13,12 @@
       type="text/css"
     />
   </head>
-  <body class="bg-gray-100">
+  <body class="bg-green-50">
     <!-- Navbar -->
     <div class="navbar bg-white shadow px-6">
       <div class="flex-1">
         <img src="./assets/logo.png" alt="logo" class="h-10 w-10" />
-        <span class="ml-2 font-bold text-xl"> Emergency Service</span>
+        <span class="ml-2 font-bold text-xl">Emergency Service</span>
       </div>
       <div class="flex items-center gap-4">
         <button id="heart-btn" class="btn btn-ghost btn-circle">💗</button>
@@ -38,262 +38,269 @@
       </p>
     </div>
 
-    <main
-      class="container mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-4 gap-6"
-    >
-      <!-- Cards Grid -->
+    <!-- Main Section -->
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 p-6">
+      <!-- Emergency Cards Section -->
       <div
-        class="lg:col-span-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        class="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+        id="card-container"
       >
-        <!-- Card Template -->
-        <!-- জাতীয় জরুরি সেবা -->
-        <div class="bg-white rounded-lg shadow p-4 flex flex-col items-center">
-          <img
-            src="./assets/emergency.png"
-            alt="Emergency"
-            class="w-12 h-12 mb-2"
-          />
-          <h2 class="text-lg font-semibold">জাতীয় জরুরি সেবা</h2>
-          <p class="text-gray-500 text-sm">National Emergency</p>
-          <p class="text-2xl font-bold mt-2">999</p>
-          <span class="text-xs bg-gray-200 px-2 py-1 rounded mt-1"
-            >সর্বজনীন</span
-          >
-          <div class="flex gap-2 mt-3">
-            <button
-              class="border border-gray-300 px-4 py-2 rounded hover:bg-gray-100"
+        <!-- Example Card (Template for All Services) -->
+        <div class="card bg-white shadow p-4">
+          <div class="flex justify-between items-center">
+            <div
+              class="w-16 h-16 rounded-2xl flex items-center justify-center bg-[#FAEEEE]"
             >
-              Copy
-            </button>
-            <button
-              class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
-            >
-              Call
-            </button>
+              <img
+                src="./assets/emergency.png"
+                alt="Emergency"
+                class="w-10 h-10 mb-2"
+              />
+            </div>
+            <span class="badge badge-neutral">সরকারি</span>
+            <button class="heart-btn">💗</button>
+          </div>
+          <div class="text-center mt-4">
+            <div class="text-2xl">📞</div>
+            <h2 class="text-lg font-bold service-name">জাতীয় জরুরি সেবা</h2>
+            <p class="text-sm text-gray-600">National Emergency</p>
+            <p class="text-xl font-bold mt-2 service-number">999</p>
+          </div>
+          <div class="flex justify-between mt-4">
+            <button class="btn btn-outline btn-sm copy-btn">📋 Copy</button>
+            <button class="btn btn-success btn-sm call-btn">📞 Call</button>
           </div>
         </div>
 
-        <!-- পুলিশ -->
-        <div class="bg-white rounded-lg shadow p-4 flex flex-col items-center">
-          <img src="./assets/police.png" alt="Police" class="w-12 h-12 mb-2" />
-          <h2 class="text-lg font-semibold">পুলিশ</h2>
-          <p class="text-gray-500 text-sm">Police</p>
-          <p class="text-2xl font-bold mt-2">999</p>
-          <span class="text-xs bg-gray-200 px-2 py-1 rounded mt-1">পুলিশ</span>
-          <div class="flex gap-2 mt-3">
-            <button
-              class="border border-gray-300 px-4 py-2 rounded hover:bg-gray-100"
+        <!-- Police -->
+        <div class="card bg-white shadow p-4">
+          <div class="flex justify-between items-center">
+            <div
+              class="w-16 h-16 rounded-2xl flex items-center justify-center bg-[#F1F6FB]"
             >
-              Copy
-            </button>
-            <button
-              class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
-            >
-              Call
-            </button>
+              <img
+                src="./assets/police.png"
+                alt="Emergency"
+                class="w-10 h-10 mb-2"
+              />
+            </div>
+            <span class="badge badge-neutral">পুলিশ</span>
+            <button class="heart-btn">💗</button>
+          </div>
+          <div class="text-center mt-4">
+            <div class="text-2xl">👮</div>
+            <h2 class="text-lg font-bold service-name">পুলিশ</h2>
+            <p class="text-sm text-gray-600">Police</p>
+            <p class="text-xl font-bold mt-2 service-number">999</p>
+          </div>
+          <div class="flex justify-between mt-4">
+            <button class="btn btn-outline btn-sm copy-btn">📋 Copy</button>
+            <button class="btn btn-success btn-sm call-btn">📞 Call</button>
           </div>
         </div>
 
-        <!-- ফায়ার সার্ভিস -->
-        <div class="bg-white rounded-lg shadow p-4 flex flex-col items-center">
-          <img
-            src="./assets/fire-service.png"
-            alt="Fire Service"
-            class="w-12 h-12 mb-2"
-          />
-          <h2 class="text-lg font-semibold">ফায়ার সার্ভিস</h2>
-          <p class="text-gray-500 text-sm">Fire Service</p>
-          <p class="text-2xl font-bold mt-2">999</p>
-          <span class="text-xs bg-gray-200 px-2 py-1 rounded mt-1">ফায়ার</span>
-          <div class="flex gap-2 mt-3">
-            <button
-              class="border border-gray-300 px-4 py-2 rounded hover:bg-gray-100"
+        <!-- Fire Service -->
+        <div class="card bg-white shadow p-4">
+          <div class="flex justify-between items-center">
+            <div
+              class="w-16 h-16 rounded-2xl flex items-center justify-center bg-[#FAEEEE]"
             >
-              Copy
-            </button>
-            <button
-              class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
-            >
-              Call
-            </button>
+              <img
+                src="./assets/fire-service.png"
+                alt="Emergency"
+                class="w-10 h-10 mb-2"
+              />
+            </div>
+            <span class="badge badge-neutral">ফায়ার</span>
+            <button class="heart-btn">💗</button>
+          </div>
+          <div class="text-center mt-4">
+            <div class="text-2xl">🚒</div>
+            <h2 class="text-lg font-bold service-name">ফায়ার সার্ভিস</h2>
+            <p class="text-sm text-gray-600">Fire Service</p>
+            <p class="text-xl font-bold mt-2 service-number">999</p>
+          </div>
+          <div class="flex justify-between mt-4">
+            <button class="btn btn-outline btn-sm copy-btn">📋 Copy</button>
+            <button class="btn btn-success btn-sm call-btn">📞 Call</button>
           </div>
         </div>
 
-        <!-- অ্যাম্বুলেন্স -->
-        <div class="bg-white rounded-lg shadow p-4 flex flex-col items-center">
-          <img
-            src="./assets/ambulance.png"
-            alt="Ambulance"
-            class="w-12 h-12 mb-2"
-          />
-          <h2 class="text-lg font-semibold">অ্যাম্বুলেন্স</h2>
-          <p class="text-gray-500 text-sm">Ambulance</p>
-          <p class="text-2xl font-bold mt-2">1994-999999</p>
-          <span class="text-xs bg-gray-200 px-2 py-1 rounded mt-1"
-            >স্বাস্থ্য</span
-          >
-          <div class="flex gap-2 mt-3">
-            <button
-              class="border border-gray-300 px-4 py-2 rounded hover:bg-gray-100"
+        <!-- Ambulance -->
+        <div class="card bg-white shadow p-4">
+          <div class="flex justify-between items-center">
+            <div
+              class="w-16 h-16 rounded-2xl flex items-center justify-center bg-[#FAEEEE]"
             >
-              Copy
-            </button>
-            <button
-              class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
-            >
-              Call
-            </button>
+              <img
+                src="./assets/ambulance.png"
+                alt="Emergency"
+                class="w-10 h-10 mb-2"
+              />
+            </div>
+            <span class="badge badge-neutral">স্বাস্থ্য</span>
+            <button class="heart-btn">💗</button>
+          </div>
+          <div class="text-center mt-4">
+            <div class="text-2xl">🚑</div>
+            <h2 class="text-lg font-bold service-name">অ্যাম্বুলেন্স</h2>
+            <p class="text-sm text-gray-600">Ambulance</p>
+            <p class="text-xl font-bold mt-2 service-number">1994-999999</p>
+          </div>
+          <div class="flex justify-between mt-4">
+            <button class="btn btn-outline btn-sm copy-btn">📋 Copy</button>
+            <button class="btn btn-success btn-sm call-btn">📞 Call</button>
           </div>
         </div>
 
-        <!-- নারী ও শিশু সহায়তা -->
-        <div class="bg-white rounded-lg shadow p-4 flex flex-col items-center">
-          <img
-            src="./assets/emergency.png"
-            alt="Women Helpline"
-            class="w-12 h-12 mb-2"
-          />
-          <h2 class="text-lg font-semibold">নারী ও শিশু সহায়তা</h2>
-          <p class="text-gray-500 text-sm">Women & Child Helpline</p>
-          <p class="text-2xl font-bold mt-2">109</p>
-          <span class="text-xs bg-gray-200 px-2 py-1 rounded mt-1">সহায়তা</span>
-          <div class="flex gap-2 mt-3">
-            <button
-              class="border border-gray-300 px-4 py-2 rounded hover:bg-gray-100"
+        <!-- Women & Child Helpline -->
+        <div class="card bg-white shadow p-4">
+          <div class="flex justify-between items-center">
+            <div
+              class="w-16 h-16 rounded-2xl flex items-center justify-center bg-[#FAEEEE]"
             >
-              Copy
-            </button>
-            <button
-              class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
-            >
-              Call
-            </button>
+              <img
+                src="./assets/emergency.png"
+                alt="Emergency"
+                class="w-10 h-10 mb-2"
+              />
+            </div>
+            <span class="badge badge-neutral">সরকারি</span>
+            <button class="heart-btn">💗</button>
+          </div>
+          <div class="text-center mt-4">
+            <div class="text-2xl">👩‍👧</div>
+            <h2 class="text-lg font-bold service-name">নারী ও শিশু সহায়তা</h2>
+            <p class="text-sm text-gray-600">Women & Child Helpline</p>
+            <p class="text-xl font-bold mt-2 service-number">109</p>
+          </div>
+          <div class="flex justify-between mt-4">
+            <button class="btn btn-outline btn-sm copy-btn">📋 Copy</button>
+            <button class="btn btn-success btn-sm call-btn">📞 Call</button>
           </div>
         </div>
 
-        <!-- দুদক -->
-        <div class="bg-white rounded-lg shadow p-4 flex flex-col items-center">
-          <img
-            src="./assets/emergency.png"
-            alt="Anti Corruption"
-            class="w-12 h-12 mb-2"
-          />
-          <h2 class="text-lg font-semibold">দুদক</h2>
-          <p class="text-gray-500 text-sm">Anti-Corruption</p>
-          <p class="text-2xl font-bold mt-2">106</p>
-          <span class="text-xs bg-gray-200 px-2 py-1 rounded mt-1">সরকারি</span>
-          <div class="flex gap-2 mt-3">
-            <button
-              class="border border-gray-300 px-4 py-2 rounded hover:bg-gray-100"
+        <!-- Anti-Corruption -->
+        <div class="card bg-white shadow p-4">
+          <div class="flex justify-between items-center">
+            <div
+              class="w-16 h-16 rounded-2xl flex items-center justify-center bg-[#FAEEEE]"
             >
-              Copy
-            </button>
-            <button
-              class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
-            >
-              Call
-            </button>
+              <img
+                src="./assets/emergency.png"
+                alt="Emergency"
+                class="w-10 h-10 mb-2"
+              />
+            </div>
+            <span class="badge badge-neutral">সরকারি</span>
+            <button class="heart-btn">💗</button>
+          </div>
+          <div class="text-center mt-4">
+            <div class="text-2xl">⚖️</div>
+            <h2 class="text-lg font-bold service-name">দুদক</h2>
+            <p class="text-sm text-gray-600">Anti-Corruption</p>
+            <p class="text-xl font-bold mt-2 service-number">106</p>
+          </div>
+          <div class="flex justify-between mt-4">
+            <button class="btn btn-outline btn-sm copy-btn">📋 Copy</button>
+            <button class="btn btn-success btn-sm call-btn">📞 Call</button>
           </div>
         </div>
 
-        <!--- বিদ্যুৎ বিপর্যয় -- -->
-        <div class="bg-white rounded-lg shadow p-4 flex flex-col items-center">
-          <img
-            src="./assets/emergency.png"
-            alt="Women Helpline"
-            class="w-12 h-12 mb-2"
-          />
-          <h2 class="text-lg font-semibold">বিদ্যুৎ বিপর্যয়</h2>
-          <p class="text-gray-500 text-sm">Electricity Qutage</p>
-          <p class="text-2xl font-bold mt-2">109</p>
-          <span class="text-xs bg-gray-200 px-2 py-1 rounded mt-1">সহায়তা</span>
-          <div class="flex gap-2 mt-3">
-            <button
-              class="border border-gray-300 px-4 py-2 rounded hover:bg-gray-100"
+        <!-- Electricity -->
+        <div class="card bg-white shadow p-4">
+          <div class="flex justify-between items-center">
+            <div
+              class="w-16 h-16 rounded-2xl flex items-center justify-center bg-[#FAEEEE]"
             >
-              Copy
-            </button>
-            <button
-              class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
-            >
-              Call
-            </button>
+              <img
+                src="./assets/emergency.png"
+                alt="Emergency"
+                class="w-10 h-10 mb-2"
+              />
+            </div>
+            <span class="badge badge-neutral">বিদ্যুৎ</span>
+            <button class="heart-btn">💗</button>
+          </div>
+          <div class="text-center mt-4">
+            <div class="text-2xl">💡</div>
+            <h2 class="text-lg font-bold service-name">বিদ্যুৎ বিভ্রাট</h2>
+            <p class="text-sm text-gray-600">Electricity Outage</p>
+            <p class="text-xl font-bold mt-2 service-number">16216</p>
+          </div>
+          <div class="flex justify-between mt-4">
+            <button class="btn btn-outline btn-sm copy-btn">📋 Copy</button>
+            <button class="btn btn-success btn-sm call-btn">📞 Call</button>
           </div>
         </div>
 
-        <!-- Card: ব্র্যাক -->
-        <div class="bg-white rounded-lg shadow p-4 flex flex-col items-center">
-          <img
-            src="./assets/emergency.png"
-            alt="Women Helpline"
-            class="w-12 h-12 mb-2"
-          />
-          <h2 class="text-lg font-semibold">ব্র্যাক</h2>
-          <p class="text-gray-500 text-sm">Brac</p>
-          <p class="text-2xl font-bold mt-2">109</p>
-          <span class="text-xs bg-gray-200 px-2 py-1 rounded mt-1">সহায়তা</span>
-          <div class="flex gap-2 mt-3">
-            <button
-              class="border border-gray-300 px-4 py-2 rounded hover:bg-gray-100"
+        <!-- Brac -->
+        <div class="card bg-white shadow p-4">
+          <div class="flex justify-between items-center">
+            <div
+              class="w-16 h-16 rounded-2xl flex items-center justify-center bg-[#FAEEEE]"
             >
-              Copy
-            </button>
-            <button
-              class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
-            >
-              Call
-            </button>
+              <img
+                src="./assets/emergency.png"
+                alt="Emergency"
+                class="w-10 h-10 mb-2"
+              />
+            </div>
+            <span class="badge badge-neutral">এনজিও</span>
+            <button class="heart-btn">💗</button>
+          </div>
+          <div class="text-center mt-4">
+            <div class="text-2xl">🏥</div>
+            <h2 class="text-lg font-bold service-name">ব্র্যাক</h2>
+            <p class="text-sm text-gray-600">Brac</p>
+            <p class="text-xl font-bold mt-2 service-number">16445</p>
+          </div>
+          <div class="flex justify-between mt-4">
+            <button class="btn btn-outline btn-sm copy-btn">📋 Copy</button>
+            <button class="btn btn-success btn-sm call-btn">📞 Call</button>
           </div>
         </div>
 
-        <!-- Card: বাংলাদেশ রেলওয়ে -->
-        <div class="bg-white rounded-lg shadow p-4 flex flex-col items-center">
-          <img
-            src="./assets/emergency.png"
-            alt="Women Helpline"
-            class="w-12 h-12 mb-2"
-          />
-          <h2 class="text-lg font-semibold">বাংলাদেশ রেলওয়ে</h2>
-          <p class="text-gray-500 text-sm">Bangladesh Raliway</p>
-          <p class="text-2xl font-bold mt-2">109</p>
-          <span class="text-xs bg-gray-200 px-2 py-1 rounded mt-1">সহায়তা</span>
-          <div class="flex gap-2 mt-3">
-            <button
-              class="border border-gray-300 px-4 py-2 rounded hover:bg-gray-100"
+        <!-- Bangladesh Railway -->
+        <div class="card bg-white shadow p-4">
+          <div class="flex justify-between items-center">
+            <div
+              class="w-16 h-16 rounded-2xl flex items-center justify-center bg-[#FAEEEE]"
             >
-              Copy
-            </button>
-            <button
-              class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
-            >
-              Call
-            </button>
+              <img
+                src="./assets/emergency.png"
+                alt="Emergency"
+                class="w-10 h-10 mb-2"
+              />
+            </div>
+            <span class="badge badge-neutral">পরিবহন</span>
+            <button class="heart-btn">💗</button>
+          </div>
+          <div class="text-center mt-4">
+            <div class="text-2xl">🚆</div>
+            <h2 class="text-lg font-bold service-name">বাংলাদেশ রেলওয়ে</h2>
+            <p class="text-sm text-gray-600">Bangladesh Railway</p>
+            <p class="text-xl font-bold mt-2 service-number">163</p>
+          </div>
+          <div class="flex justify-between mt-4">
+            <button class="btn btn-outline btn-sm copy-btn">📋 Copy</button>
+            <button class="btn btn-success btn-sm call-btn">📞 Call</button>
           </div>
         </div>
       </div>
 
-      <!-- Call History -->
-      <div class="bg-white rounded-lg shadow p-4">
-        <div class="flex justify-between items-center mb-4">
-          <h3 class="text-lg font-semibold">📞 Call History</h3>
-          <button class="btn btn-sm btn-error text-white">Clear</button>
+      <!-- History Section -->
+      <div class="bg-white shadow rounded-lg p-4">
+        <div class="flex justify-between items-center">
+          <h2 class="font-bold text-lg">📞 Call History</h2>
+          <button id="clear-history" class="btn btn-sm btn-error">Clear</button>
         </div>
-        <ul class="space-y-2">
-          <li class="flex justify-between text-sm">
-            <span>জাতীয় জরুরি সেবা</span>
-            <span class="text-gray-500">11:36:58 AM</span>
-          </li>
-          <li class="flex justify-between text-sm">
-            <span>অ্যাম্বুলেন্স</span>
-            <span class="text-gray-500">11:36:58 AM</span>
-          </li>
-          <li class="flex justify-between text-sm">
-            <span>পুলিশ</span>
-            <span class="text-gray-500">11:36:58 AM</span>
-          </li>
+        <ul id="history-list" class="mt-4 space-y-2">
+          <!-- History Items will appear here -->
         </ul>
       </div>
-    </main>
+    </div>
+
     <!-- External JS -->
     <script src="script.js"></script>
   </body>
